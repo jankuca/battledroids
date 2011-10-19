@@ -32,13 +32,15 @@ battledroids.Droid = function (id, sprite, frames) {
 	this.seq_ = seq;
 };
 
-battledroids.Droid.prototype.applyDelta = function (delta) {
+battledroids.Droid.prototype.applyDelta = function (delta, animate_only) {
 	this.delta_ += delta;
 
-	var gain = Math.round(delta / 8);
-	this.setPosition(this.x + this.movement[0] * gain, this.y + this.movement[1] * gain);
+	if (!animate_only) {
+		var gain = Math.round(delta / 8);
+		this.setPosition(this.x + this.movement[0] * gain, this.y + this.movement[1] * gain);
+	}
 
-	if (this.delta_ > 500) {
+	if (this.delta_ > 50) {
 		this.delta_ = 0;
 		if (this.movement[0] || this.movement[1]) {
 			this.seq_.currentFrame = this.frames_[this.current_frame_index_++];
@@ -50,6 +52,20 @@ battledroids.Droid.prototype.applyDelta = function (delta) {
 };
 
 battledroids.Droid.prototype.setPosition = function (x, y) {
+	var stage = this.seq_.getStage();
+	if (!stage) { return; }
+	var canvas = stage.canvas;
+	if (x < 0) {
+		x = 0;
+	} else if (x > canvas.width - 2 * this.seq_.regX) {
+		x = canvas.width - 2 * this.seq_.regX;
+	}
+	if (y < 0) {
+		y = 0;
+	} else if (y > canvas.height - 2 * this.seq_.regY) {
+		y = canvas.height - 2 * this.seq_.regY;
+	}
+	
 	this.x = x;
 	this.y = y;
 	this.seq_.x = x + this.seq_.regX;
@@ -108,6 +124,8 @@ battledroids.Droid.prototype.listenTo = function (element) {
 				self.movement = [ +0, +1 ];
 				self.setRotation(0);
 				break;
+			case 32:
+				self.shoot();
 		}
 	});
 	element.addEventListener('keyup', function (e) {
@@ -126,4 +144,13 @@ battledroids.Droid.prototype.listenTo = function (element) {
 				break;
 		}
 	});
+};
+
+battledroids.Droid.prototype.remove = function () {
+	this.seq_.getStage().removeChild(this.seq_);
+};
+
+battledroids.Droid.prototype.shoot = function () {
+	var id = Math.random() * 1e20;
+	this.onshoot(id);
 };

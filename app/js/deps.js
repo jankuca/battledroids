@@ -22,6 +22,7 @@ goog.addDependency("../../easel/src/easeljs/ui/Touch.js", ['easel.Touch'], []);
 goog.addDependency("../../easel/src/easeljs/utils/SpriteSheetUtils.js", ['easel.SpriteSheetUtils'], []);
 goog.addDependency("../../easel/src/easeljs/utils/Ticker.js", ['easel.Ticker'], []);
 goog.addDependency("../../easel/src/easeljs/utils/UID.js", ['easel.UID'], []);
+goog.addDependency("../../../app/js/app.js", [], []);
 goog.addDependency("../../../app/js/canvas.js", ['battledroids.Canvas'], []);
 goog.addDependency("../../../app/js/deps.js", [], []);
 goog.addDependency("../../../app/js/main.js", [], ['battledroids.Canvas', 'easel.Stage']);

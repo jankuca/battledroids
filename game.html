@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<meta charset="UTF-8" />
+<title>Battledroids</title>
+
+<link rel="stylesheet" href="./app/css/app.css" />
+<link rel="stylesheet" href="./app/css/form.css" />
+<link rel="stylesheet" href="./app/css/game.css" />
+<script src="./lib/pixastic/pixastic.custom.js"></script>
+
+<body>
+	<h1>Battledroids</h1>
+
+	<img src="./app/img/ground.jpg" class="game_canvas" />
+	
+	<ul class="players">
+		<li class="me">
+			<span class="player_img"><span  id="player_img"></span></span>
+			<span class="player_score">5</span>
+			<span class="player_name">Ondřej</span>
+			<span class="player_stats">K: 10 D: 5</span>
+		</li>
+		<li>
+			<span class="player_img"></span>
+			<span class="player_score">7</span>
+			<span class="player_name">Tomáš</span>
+			<span class="player_stats">K: 14 D: 7</span>
+		</li>
+		<li>
+			<span class="player_img"></span>
+			<span class="player_score">15</span>
+			<span class="player_name">Zdenda</span>
+			<span class="player_stats">K: 37 D: 7</span>
+		</li>
+		<li>
+			<span class="player_img"></span>
+			<span class="player_score">15</span>
+			<span class="player_name">Zdenda</span>
+			<span class="player_stats">K: 37 D: 7</span>
+		</li>
+	</ul>
+	
+	<script type="text/javascript">
+	var img1 = new Image();
+	img1.onload = function() {
+		Pixastic.process(img1, "hsl", {hue:-180,saturation:100,lightness:0});
+	}
+	var span = document.createElement("span");
+	span.appendChild(img1);
+	document.getElementById("player_img").appendChild(span);
+	img1.src = "./app/img/droids_s.png";
+	</script>
+</body>
+</html>

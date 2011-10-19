@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<meta charset="UTF-8" />
+<title>Battledroids</title>
+
+<link rel="stylesheet" href="./app/css/app.css" />
+<link rel="stylesheet" href="./app/css/form.css" />
+<script src="./lib/pixastic/pixastic.custom.js"></script>
+
+<body>
+	<h1>Battledroids</h1>
+
+<form id="login_form">
+	<h2>Login to game</h2>
+	<input type="text" name="username" placeholder="username" />
+	<input type="hidden" name="droidtype" value="1" />
+	<h3 class="type">Choose type</h3>
+	<div class="droid_container">
+		<div class="droid_1 droid_chooser"><span>type 1</span></div>
+		<div class="droid_2 droid_chooser active"><span>type 2</span></div>
+		<div class="droid_3 droid_chooser"><span>type 3</span></div>
+  </div>	
+	<h3 class="color">Choose color</h3>
+	<div class="color_container droid_1">
+		<div id="droid_c_1" class="droid_c_1 droid_chooser"></div>
+		<div id="droid_c_6" class="droid_c_6 droid_chooser"></div>
+		<div id="droid_c_2" class="droid_c_2 droid_chooser active"></div>
+		<div id="droid_c_3" class="droid_c_3 droid_chooser"></div>
+		<div id="droid_c_4" class="droid_c_4 droid_chooser"></div>
+		<div id="droid_c_5" class="droid_c_5 droid_chooser"></div>
+	</div>
+	<input type="submit" name="login" value="start playing"/>
+</form>
+
+
+<script type="text/javascript">
+var img1 = new Image();
+img1.onload = function() {
+	Pixastic.process(img1, "hsl", {hue:-180,saturation:100,lightness:0});
+}
+var span = document.createElement("span");
+span.appendChild(img1);
+document.getElementById("droid_c_1").appendChild(span);
+img1.src = "./app/img/droids_s.png";
+
+var img2 = new Image();
+img2.onload = function() {
+	Pixastic.process(img2, "hsl", {hue:-60,saturation:100,lightness:0});
+}
+var span = document.createElement("span");
+span.appendChild(img2);
+document.getElementById("droid_c_2").appendChild(span);
+img2.src = "./app/img/droids_s.png";
+
+var img3 = new Image();
+img3.onload = function() {
+	Pixastic.process(img3, "hsl", {hue:-0,saturation:100,lightness:0});
+}
+var span = document.createElement("span");
+span.appendChild(img3);
+document.getElementById("droid_c_3").appendChild(span);
+img3.src = "./app/img/droids_s.png";
+
+var img4 = new Image();
+img4.onload = function() {
+	Pixastic.process(img4, "hsl", {hue:60,saturation:100,lightness:0});
+}
+var span = document.createElement("span");
+span.appendChild(img4);
+document.getElementById("droid_c_4").appendChild(span);
+img4.src = "./app/img/droids_s.png";
+
+var img5 = new Image();
+img5.onload = function() {
+	Pixastic.process(img5, "hsl", {hue:120,saturation:100,lightness:0});
+}
+var span = document.createElement("span");
+span.appendChild(img5);
+document.getElementById("droid_c_5").appendChild(span);
+img5.src = "./app/img/droids_s.png";
+
+
+var img6 = new Image();
+img6.onload = function() {
+	Pixastic.process(img6, "hsl", {hue:-150,saturation:100,lightness:0});
+}
+var span = document.createElement("span");
+span.appendChild(img6);
+document.getElementById("droid_c_6").appendChild(span);
+img6.src = "./app/img/droids_s.png";
+
+
+</script>
+</body>
+</html>

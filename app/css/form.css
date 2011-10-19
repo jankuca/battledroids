@@ -1,14 +1,21 @@
 html {
   height:100%;
+  background:black;
+  padding:0;
+  margin:0;
 }
 body {
+  background:url("../img/background.png") 0 0 no-repeat;
   height:100%;
-  background:url("../img/background.png");
+  padding:0;
+  margin:0;
   background-size: 100% 100%;
 }
 
 h1 {
-  background:url("../img/battledroids.png");
+  margin-top:0;
+  padding-top:30px;
+  background:url("../img/battledroids.png") bottom no-repeat;
   width:500px;
   height:47px;
   text-indent:-999em;
@@ -22,6 +29,24 @@ h2 {
   margin-right:auto;
   width:300px;
   height:28px;
+  text-indent:-999em;
+}
+
+h3.type {
+  background:url("../img/choose_type.png");
+  margin-left:auto;
+  margin-right:auto;
+  width:225px;
+  height:24;
+  text-indent:-999em;
+}
+
+h3.color {
+  background:url("../img/choose_color.png");
+  margin-left:auto;
+  margin-right:auto;
+  width:225px;
+  height:24;
   text-indent:-999em;
 }
 
@@ -76,6 +101,7 @@ h2 {
 #login_form input::-webkit-input-placeholder {
   color: #000000;
   font-weight:normal;
+  text-align:center;
 }
 #login_form input[type="submit"]{
   border-radius: .614em;
@@ -128,11 +154,12 @@ h2 {
   width:48px;
   height:48px;
 }
-.droid_chooser span{
+.droid_container .droid_chooser span{
   display:inline-block;
+  padding:none;
   width:48px;
   height:48px;
-  background:url("../img/droids_s.png");
+  background:url("../img/droids_s_bw.png");
   text-indent:-999em;
 }
 
@@ -144,13 +171,13 @@ h2 {
   opacity:1;
 }
 
-.droid_1 span {
+.droid_container .droid_1 span {
   background-position:0px 0px;
 }
-.droid_2 span {
+.droid_container .droid_2 span {
   background-position:48px 0px;
 }
-.droid_3 span {
+.droid_container .droid_3 span {
   background-position:96px 0px;
 }
 
@@ -160,4 +187,30 @@ h2 {
   margin-bottom:20px;
   margin-left:auto;
   margin-right:auto;
+}
+
+.color_container {
+  margin-top:10px;
+  margin-bottom:20px;
+}
+.color_container canvas {
+  border:none;
+}
+.color_container .droid_chooser {
+}
+.color_container .droid_chooser span{
+  overflow:hidden;
+  width:48px;
+  height:48px;
+  display:block;
+}
+
+.color_container.droid_1 .droid_chooser span canvas{
+  margin-left:0px;
+}
+.color_container.droid_2 .droid_chooser span canvas{
+  margin-left:-96px;
+}
+.color_container.droid_3 .droid_chooser span canvas{
+  margin-left:-48px;
 }

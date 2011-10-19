@@ -1,3 +1,8 @@
+* {
+  font: normal normal normal 69%/160% 'Lucida Grande', Verdana, Helvetica, Arial, sans-serif;
+  font-size:14px;
+}
+
 canvas {
-	border: 2px solid black;
+	border: 0px;
 }

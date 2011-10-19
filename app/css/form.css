@@ -1,0 +1,216 @@
+html {
+  height:100%;
+  background:black;
+  padding:0;
+  margin:0;
+}
+body {
+  background:url("../img/background.png") 0 0 no-repeat;
+  height:100%;
+  padding:0;
+  margin:0;
+  background-size: 100% 100%;
+}
+
+h1 {
+  margin-top:0;
+  padding-top:30px;
+  background:url("../img/battledroids.png") bottom no-repeat;
+  width:500px;
+  height:47px;
+  text-indent:-999em;
+  margin-left:auto;
+  margin-right:auto;
+  
+}
+h2 {
+  background:url("../img/login_to_game.png");
+  margin-left:auto;
+  margin-right:auto;
+  width:300px;
+  height:28px;
+  text-indent:-999em;
+}
+
+h3.type {
+  background:url("../img/choose_type.png");
+  margin-left:auto;
+  margin-right:auto;
+  width:225px;
+  height:24;
+  text-indent:-999em;
+}
+
+h3.color {
+  background:url("../img/choose_color.png");
+  margin-left:auto;
+  margin-right:auto;
+  width:225px;
+  height:24;
+  text-indent:-999em;
+}
+
+#login_form {
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:200px;
+  color: #4f4f4f;
+  text-shadow: 0 1px 1px #fff;
+  background: #e9d33e;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e9d33e), to(#e98b25));
+  background: -moz-linear-gradient(top, #e9d33e, #e98b25);
+  border: 1px solid #acacac;
+  border-top-color: #bdbdbd;
+  border-bottom-color: #949494;
+  border-radius: 1em;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  transition: all .2s ease-in-out;
+  width:400px;
+  z-index:20000;
+  padding-left:30px;
+  padding-right:30px;
+  padding-bottom:30px;
+  box-shadow: 0 0 12px #000;
+  -webkit-box-shadow: 0 0 12px #555;
+  -moz-box-shadow: 0 0 12px #555;
+  -o-box-shadow: 0 0 12px #555;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:100px;
+}
+
+#login_form input[type="text"]{
+  border-radius: .614em;
+  width:300px;
+  margin-left:auto;
+  margin-right:auto;
+  display:block;
+  background: #3edb00;
+  font-size:18px;
+  border: 1px solid #acacac;
+  border-top-color: #bdbdbd;
+  border-bottom-color: #949494;
+  font-weight:bold;
+  padding:.4em;
+  background: -webkit-gradient(linear, left top, left bottom, from(#3edb00), to(#2b9900));
+  background: -moz-linear-gradient(top, #3edb00, #2b9900);
+  color: #000000;
+  text-align:center;
+}
+#login_form input::-webkit-input-placeholder {
+  color: #000000;
+  font-weight:normal;
+  text-align:center;
+}
+#login_form input[type="submit"]{
+  border-radius: .614em;
+  width:300px;
+  margin-left:auto;
+  margin-right:auto;
+  display:block;
+  color: #000;
+  text-shadow: 0 1px 3px #fff;
+  background: #3edb00;
+  font-size:18px;
+  border: 1px solid #acacac;
+  border-top-color: #bdbdbd;
+  border-bottom-color: #949494;
+  font-weight:bold;
+  padding:.4em;
+  background: -webkit-gradient(linear, left top, left bottom, from(#3edb00), to(#2b9900));
+  background: -moz-linear-gradient(top, #3edb00, #2b9900);
+}
+
+#login_form input:hover[type="submit"] {
+  box-shadow: 0 0 12px #000;
+  -webkit-box-shadow: 0 0 12px #000;
+  -moz-box-shadow: 0 0 12px #000;
+  -o-box-shadow: 0 0 12px #000; 
+  background: -webkit-gradient(linear, left top, left bottom, from(#4eeb10), to(#3ba910));
+  background: -moz-linear-gradient(top, #4eeb10, #3ba910);
+  transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+}
+
+.droid_chooser {
+  border: 1px solid #acacac;
+  border-top-color: #bdbdbd;
+  border-bottom-color: #949494;
+  font-weight:bold;
+  padding:.4em;
+  background: -webkit-gradient(linear, left top, left bottom, from(#3edb00), to(#2b9900));
+  background: -moz-linear-gradient(top, #3edb00, #2b9900);
+  transition: all .2s ease-in-out;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+  opacity:0.5;
+  border-radius: 1em;
+  
+  display:inline-block;
+  width:48px;
+  height:48px;
+}
+.droid_container .droid_chooser span{
+  display:inline-block;
+  padding:none;
+  width:48px;
+  height:48px;
+  background:url("../img/droids_s_bw.png");
+  text-indent:-999em;
+}
+
+.droid_chooser:hover {
+  opacity:0.8;
+}
+
+.droid_chooser.active {
+  opacity:1;
+}
+
+.droid_container .droid_1 span {
+  background-position:0px 0px;
+}
+.droid_container .droid_2 span {
+  background-position:48px 0px;
+}
+.droid_container .droid_3 span {
+  background-position:96px 0px;
+}
+
+.droid_container {
+  width:200px;
+  margin-top:10px;
+  margin-bottom:20px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.color_container {
+  margin-top:10px;
+  margin-bottom:20px;
+}
+.color_container canvas {
+  border:none;
+}
+.color_container .droid_chooser {
+}
+.color_container .droid_chooser span{
+  overflow:hidden;
+  width:48px;
+  height:48px;
+  display:block;
+}
+
+.color_container.droid_1 .droid_chooser span canvas{
+  margin-left:0px;
+}
+.color_container.droid_2 .droid_chooser span canvas{
+  margin-left:-96px;
+}
+.color_container.droid_3 .droid_chooser span canvas{
+  margin-left:-48px;
+}

@@ -1,0 +1,70 @@
+.game_canvas {
+  width:800px;
+  height:480px;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  border: 1px solid #acacac;
+  border-top-color: #bdbdbd;
+  border-bottom-color: #949494;
+  box-shadow: 0 0 12px #000;
+  -webkit-box-shadow: 0 0 12px #555;
+  -moz-box-shadow: 0 0 12px #555;
+  -o-box-shadow: 0 0 12px #555;
+}
+
+.players {
+  width:800px;
+  margin-left:auto;
+  margin-right:auto;
+  padding:0;
+  
+}
+
+.players li.me {
+  background: -webkit-gradient(linear, left top, left bottom, from(#3edb00), to(#2b9900));
+  background: -moz-linear-gradient(top, #3edb00, #2b9900);
+}
+
+.players li {
+  border: 1px solid #555;
+  border-top-color: #666;
+  border-bottom-color: #333;
+  font-weight:bold;
+  padding:.4em;
+  background: -webkit-gradient(linear, left top, left bottom, from(#1eab00), to(#0b5900));
+  background: -moz-linear-gradient(top, #1eab00, #0b5900);
+  border-radius: 1em;
+  width:183px;
+  margin-bottom:5px;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  display:inline-block;
+}
+
+.player_img {
+  width:48px;
+  height:48px;
+  float:left;
+  overflow:hidden;
+}
+.player_score {
+  text-shadow: 0 1px 1px #fff;
+  background: #e9d33e;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e9d33e), to(#e98b25));
+  background: -moz-linear-gradient(top, #e9d33e, #e98b25);
+  border: 1px solid #acacac;
+  border-top-color: #bdbdbd;
+  border-bottom-color: #949494;
+  border-radius: .4em;
+  -webkit-border-radius: .4em;
+  -moz-border-radius: .4em;
+  font-size:20px;
+  width:30px;
+  text-align:center;
+  float:right;
+}
+.player_name {
+  font-weight:bold;
+  display:block;
+}
